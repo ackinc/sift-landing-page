@@ -39,18 +39,23 @@ export function HeroSection() {
 
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground md:text-xl text-pretty">
             Sift adds IMDB ratings next to movies and TV shows on Netflix, Prime
-            Video, Disney+, and more. Choose what to watch faster.
+            Video, and more. Choose what to watch faster.
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row flex-wrap">
             {browsers.map((browser) => (
-              <Button key={browser.name} size="lg" className="gap-2 px-8" asChild>
-                <a
-                  href={browser.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={browser.logo} alt={browser.name} className="h-5 w-5" />
+              <Button
+                key={browser.name}
+                size="lg"
+                className="gap-2 px-8"
+                asChild
+              >
+                <a href={browser.url} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={browser.logo}
+                    alt={browser.name}
+                    className="h-5 w-5"
+                  />
                   Add to {browser.name}
                 </a>
               </Button>
