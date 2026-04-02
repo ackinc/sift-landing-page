@@ -15,21 +15,7 @@ export const metadata: Metadata = {
     "Free & open-source browser extension that adds IMDB ratings to Netflix, Prime Video, Disney+, and other streaming platforms. Available for Chrome, Edge, and Firefox.",
   generator: "v0.app",
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: "/favicon.ico",
   },
 };
 
