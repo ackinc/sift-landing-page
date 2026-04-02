@@ -1,20 +1,19 @@
 import { Button } from "@/components/ui/button";
-import { Chrome, Globe } from "lucide-react";
 
 const browsers = [
   {
     name: "Chrome",
-    icon: Chrome,
+    logo: "/chrome32.png",
     url: "https://chromewebstore.google.com/detail/sift-imdb-ratings-on-vari/pfnhkljamlclkackkndllofcfhihacna",
   },
   {
     name: "Edge",
-    icon: Globe,
+    logo: "/edge32.png",
     url: "https://microsoftedge.microsoft.com/addons/detail/sift-imdb-ratings-on-var/odgepppomekmdiifmjmocpjhopdmgjnl",
   },
   {
     name: "Firefox",
-    icon: Globe,
+    logo: "/firefox32.png",
     url: "https://addons.mozilla.org/en-US/firefox/addon/imdb-ratings-for-various-ott/",
   },
 ];
@@ -40,8 +39,8 @@ export function DownloadSection() {
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center gap-4 rounded-2xl border border-border bg-background p-8 transition-all hover:border-accent hover:shadow-lg"
               >
-                <div className="text-foreground transition-colors group-hover:text-accent">
-                  <browser.icon className="h-10 w-10" />
+                <div className="transition-opacity group-hover:opacity-80">
+                  <img src={browser.logo} alt={browser.name} className="h-10 w-10" />
                 </div>
                 <div>
                   <div className="text-lg font-semibold text-foreground">

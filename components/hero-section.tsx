@@ -1,7 +1,25 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Chrome, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+
+const browsers = [
+  {
+    name: "Chrome",
+    logo: "/chrome32.png",
+    url: "https://chromewebstore.google.com/detail/sift-imdb-ratings-on-vari/pfnhkljamlclkackkndllofcfhihacna",
+  },
+  {
+    name: "Edge",
+    logo: "/edge32.png",
+    url: "https://microsoftedge.microsoft.com/addons/detail/sift-imdb-ratings-on-var/odgepppomekmdiifmjmocpjhopdmgjnl",
+  },
+  {
+    name: "Firefox",
+    logo: "/firefox32.png",
+    url: "https://addons.mozilla.org/en-US/firefox/addon/imdb-ratings-for-various-ott/",
+  },
+];
 
 export function HeroSection() {
   return (
@@ -24,24 +42,26 @@ export function HeroSection() {
             Video, Disney+, and more. Choose what to watch faster.
           </p>
 
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button size="lg" className="gap-2 px-8" asChild>
-              <a
-                href="https://chromewebstore.google.com/detail/sift-imdb-ratings-on-vari/pfnhkljamlclkackkndllofcfhihacna"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Chrome className="h-5 w-5" />
-                Add to Chrome
-              </a>
-            </Button>
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row flex-wrap">
+            {browsers.map((browser) => (
+              <Button key={browser.name} size="lg" className="gap-2 px-8" asChild>
+                <a
+                  href={browser.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={browser.logo} alt={browser.name} className="h-5 w-5" />
+                  Add to {browser.name}
+                </a>
+              </Button>
+            ))}
             <Button size="lg" variant="outline" className="gap-2 px-8" asChild>
               <a
                 href="https://github.com/ackinc/webext-movie-ratings"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Github className="h-5 w-5" />
+                <ExternalLink className="h-5 w-5" />
                 View on GitHub
               </a>
             </Button>
