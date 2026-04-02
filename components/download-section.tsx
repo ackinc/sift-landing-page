@@ -30,27 +30,18 @@ export function DownloadSection() {
             Available on all major browsers. Install in seconds.
           </p>
 
-          <div className="grid gap-6 sm:grid-cols-3">
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row flex-wrap">
             {browsers.map((browser) => (
-              <a
-                key={browser.name}
-                href={browser.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col items-center gap-4 rounded-2xl border border-border bg-background p-8 transition-all hover:border-accent hover:shadow-lg"
-              >
-                <div className="transition-opacity group-hover:opacity-80">
-                  <img src={browser.logo} alt={browser.name} className="h-10 w-10" />
-                </div>
-                <div>
-                  <div className="text-lg font-semibold text-foreground">
-                    {browser.name}
-                  </div>
-                </div>
-                <Button variant="outline" size="sm" className="mt-2">
+              <Button key={browser.name} size="lg" className="gap-2 px-8" asChild>
+                <a
+                  href={browser.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={browser.logo} alt={browser.name} className="h-5 w-5" />
                   Add to {browser.name}
-                </Button>
-              </a>
+                </a>
+              </Button>
             ))}
           </div>
         </div>
