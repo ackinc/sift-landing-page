@@ -1,31 +1,38 @@
 const platforms = [
-  { name: "Netflix", color: "bg-red-600" },
-  { name: "Amazon Prime Video", color: "bg-blue-500" },
-  { name: "Youtube Movies", color: "bg-red-500" },
-  { name: "Apple TV+", color: "bg-gray-800" },
-  { name: "Hotstar", color: "bg-blue-900" },
-  { name: "SonyLIV", color: "bg-black" },
-  { name: "Crunchyroll", color: "bg-orange-500" },
+  { name: "Netflix", logo: "/logos/netflix_wordmark.jpg", url: "https://www.netflix.com" },
+  { name: "Amazon Prime Video", logo: "/logos/amazonprimevideo_wordmark.svg", url: "https://www.primevideo.com" },
+  { name: "YouTube Movies", logo: "/logos/youtube.svg", url: "https://www.youtube.com/movies" },
+  { name: "Apple TV+", logo: "/logos/appletv_wordmark.svg", url: "https://tv.apple.com" },
+  { name: "Hotstar", logo: "/logos/hotstar_wordmark.jpg", url: "https://www.hotstar.com" },
+  { name: "SonyLIV", logo: "/logos/sonyliv_wordmark.png", url: "https://www.sonyliv.com" },
+  { name: "Crunchyroll", logo: "/logos/crunchyroll_wordmark.svg", url: "https://www.crunchyroll.com" },
 ];
 
 export function PlatformsSection() {
   return (
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto max-w-7xl text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             Works where you watch
           </h2>
 
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-24">
             {platforms.map((platform) => (
-              <div
+              <a
                 key={platform.name}
-                className="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-all hover:border-accent hover:shadow-md"
+                href={platform.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={platform.name}
+                className="grayscale opacity-60 transition-all hover:grayscale-0 hover:opacity-100"
               >
-                <span className={`h-3 w-3 rounded-full ${platform.color}`} />
-                {platform.name}
-              </div>
+                <img
+                  src={platform.logo}
+                  alt={platform.name}
+                  className="h-20 w-auto"
+                />
+              </a>
             ))}
           </div>
         </div>
