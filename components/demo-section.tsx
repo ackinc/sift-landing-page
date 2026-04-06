@@ -18,7 +18,7 @@ export function DemoSection() {
           <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-2xl">
             <div className="aspect-video">
               <iframe
-                src="https://www.youtube.com/embed/NXBS0n9awSw?rel=0"
+                src="https://www.youtube.com/embed/0nacMtjRhk4?rel=0"
                 title="Sift Demo Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
