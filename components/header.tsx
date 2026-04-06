@@ -32,7 +32,7 @@ export function Header() {
             alt="Sift logo"
             className="h-8 w-8 rounded-lg"
           />
-          <span className="text-xl font-bold text-foreground">Soft</span>
+          <span className="text-xl font-bold text-foreground">Sift</span>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
