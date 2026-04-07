@@ -2,7 +2,7 @@
 
 export function DemoSection() {
   return (
-    <section className="py-16 md:py-24">
+    <section id="demo" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">

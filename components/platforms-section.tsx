@@ -38,7 +38,7 @@ const platforms = [
 
 export function PlatformsSection() {
   return (
-    <section className="py-16 md:py-24">
+    <section id="platforms" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-7xl text-center">
           <h2 className="mb-12 text-3xl font-bold tracking-tight text-foreground md:text-4xl">

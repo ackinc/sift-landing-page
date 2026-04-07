@@ -20,7 +20,7 @@ const browsers = [
 
 export function DownloadSection() {
   return (
-    <section className="py-16 md:py-24 bg-card">
+    <section id="download" className="py-16 md:py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">

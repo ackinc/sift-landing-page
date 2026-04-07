@@ -12,16 +12,10 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <div id="demo">
-          <DemoSection />
-        </div>
-        <div id="features">
-          <FeaturesSection />
-        </div>
+        <DemoSection />
+        <FeaturesSection />
         <PlatformsSection />
-        <div id="download">
-          <DownloadSection />
-        </div>
+        <DownloadSection />
       </main>
       <Footer />
     </div>
